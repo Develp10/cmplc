@@ -27,15 +27,10 @@
     font-weight: 500
     white-space: nowrap
 
-.presale-title__left
-
-.presale-title__right
-    position: relative
+.presale-title__progress-card
+    +card
     padding: 55px
-    //min-height: 175px
     border-radius: 45px
-    background-color: #ffffff
-    box-shadow: 2px 10px 16px 0px rgba(0,0,0,0.14)
 
 .presale-title__vertical-line-1
     position: absolute
@@ -62,15 +57,15 @@
     margin: 1.5rem auto
     left: 5px
     font-size: 28px
-    width: max-content
-    max-width: 100%
+    //width: max-content
+    //max-width: 100%
 .presale-title__coins-left
     position: relative
     margin: 1.5rem auto
     right: 5px
     font-size: 28px
-    width: max-content
-    max-width: 100%
+    //width: max-content
+    //max-width: 100%
 
 .presale-title__button-text
     position: absolute
@@ -79,3 +74,7 @@
     left: 15px
     transform: translateY(-50%)
     color: white
+.presale-title__text-container
+    display: flex
+    align: center
+    justify-content: center
