@@ -23,17 +23,23 @@ const PresaleTitle = ({ ico_info }) => {
         </div>
       </div>
       <div className="presale-title__right">
-        <p className="font_bold presale-title__selled-coins">
-          {t("presale__title__selled_coins")}:{" "}
-          {ico_info ? ico_info.selled_coins : "0"} CMP
-          <div className="presale-title__vertical-line-1"></div>
-        </p>
-        <ProgressBarTitle ico_info={ico_info} />
-        <p className="font_bold presale-title__coins-left">
-          {t("presale__title__left_coins")}:{" "}
-          {ico_info ? ico_info.coins_left : "0"} CMP
-          <div className="presale-title__vertical-line-2"></div>
-        </p>
+        <div className="presale-title__progress-card">
+          <section class="presale-title__text-container">
+              <p className="font_bold presale-title__selled-coins">
+                {t("presale__title__selled_coins")}:{" "}
+                {ico_info ? ico_info.selled_coins : "0"} CMP
+                <div className="presale-title__vertical-line-1"></div>
+              </p>
+          </section>
+          <ProgressBarTitle ico_info={ico_info} />
+          <section class="presale-title__text-container">
+              <p className="font_bold presale-title__coins-left">
+                {t("presale__title__left_coins")}:{" "}
+                {ico_info ? ico_info.coins_left : "0"} CMP
+                <div className="presale-title__vertical-line-2"></div>
+              </p>
+          </section>
+        </div>
       </div>
     </div>
   );
