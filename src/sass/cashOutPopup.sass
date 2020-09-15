@@ -1,0 +1,26 @@
+@import 'src/sass/popup'
+@import 'src/sass/responsiveBreakpoints' 
+@import 'src/sass/componentMixins'
+
+.cash-out-popup__item
+    display: flex
+    justify-content: space-between
+.cash-out-popup__title
+    @extend .cash-out-popup__item
+.cash-out-popup__item.responsive-input-container
+    @media (max-width: $md)
+        flex-direction: column
+.cash-out-popup__input
+    z-index: 999
+    width: 20rem
+    @media (max-width: $md)
+        width: auto
+    +input
+
+.cash-out-popup__item-button
+    display: flex
+    justify-content: flex-end
+    margin-top: 10px
+    
+.cash-out-popup__button
+    +button(#ffffff)

@@ -1,0 +1,39 @@
+@import 'src/sass/responsiveBreakpoints'   
+@import 'src/sass/componentMixins'
+
+.partner-statistics
+    +card
+
+.partner-statistics__item
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__active
+        background: #f4f4f4
+        border-radius: 50px
+    p
+        margin: 0
+        padding: 10px
+
+.partner-statistics__menu
+    +headerWithButton
+
+.partner-statistics__title
+    font-weight: bold
+    font-size: 21px
+    margin-top: 5px
+    margin-bottom: 5px
+
+.partner-statistics__download-button
+    +button(#f5f5f5, #6f6f6f, normal)
+    +buttonResponsive
+    height: 30px
+
+.partner-statistics__text
+    flex-basis: 50%
+
+.partner-statistics__data
+    text-align: center
+    font-weight: bold
+    flex-basis: 50%

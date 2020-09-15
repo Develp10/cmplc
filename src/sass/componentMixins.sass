@@ -1,0 +1,102 @@
+@import 'src/sass/responsiveBreakpoints'
+    
+=button($backgroundColor, $textColor: #000000, $fontWeight: bold)
+    cursor: pointer
+    height: 40px
+    width: 130px
+    border-radius: 10px
+    border: none
+    background-color: $backgroundColor
+    color: $textColor
+    font-weight: $fontWeight
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 2px 10px 16px 0px rgba(0,0,0,0.14)
+    &:hover
+        background-color: #d2d2d2
+    &:active
+        transform: translateY(2px)
+=buttonResponsive($block: false)
+    width: auto
+    &:not(:first-child)
+        margin: 5px 0 0
+    @media(min-width: $xs)
+        @if $block
+            flex-basis: 0
+            flex-grow: 1
+        @else
+            width: 130px
+            flex-basis: auto
+            flex-grow: 0
+        &:not(:first-child)
+            margin: 0 0 0 5px
+=buttonsAlignResponsive
+    display: flex
+    justify-content: center
+    @media (max-width: $xs)
+        flex-direction: column
+=input
+    background-color: #f5f5f5
+    display: block
+    height: 45px
+    border-radius: 10px
+    padding: 0 15px
+    border: none /* Убираем рамку */
+    outline: none /* Убираем свечение в Chrome и Safari */
+    -webkit-appearance: none /* Убираем рамку в Chrome и Safari */
+
+=copyButton
+    +button(#ffffff, #000000)
+    position: absolute
+    top: calc( 50% - 20px )
+    right: 10px
+    width: auto
+    padding: 0 15px
+    p
+        display: none
+    @media(min-width: $sm)
+        p
+            display: block
+        img
+            display: none
+=card
+    background-color: #ffffff
+    border-radius: 15px
+    padding: 15px 0
+    box-shadow: 2px 10px 16px 0px rgba(0,0,0,0.14)
+    hr
+        border: solid 2px #f5f5f5
+
+=headerWithButton
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 15px
+    @media (max-width: $xs)
+        flex-direction: column
+        align-items: stretch
+        text-align: center
+
+=alignChildrenResponsiveWithJustify($margin-and-justify-large-screen: "left", $margin-smaller-sm: 20px, $margin-larger-sm: 15px)
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    &>*:not(:first-child)
+        margin: $margin-smaller-sm 0 0
+    @media (min-width: $md)
+        flex-direction: row
+        @if ($margin-and-justify-large-screen == "left")
+            justify-content: flex-start
+        @else if ($margin-and-justify-large-screen == "right")
+            justify-content: flex-end
+        @else 
+            justify-content: space-between
+        align-items: flex-start
+        &>*:not(:first-child)
+            margin: 0
+            @if ($margin-and-justify-large-screen == "left")
+                margin-right: $margin-larger-sm
+            @else if ($margin-and-justify-large-screen == "right")
+                margin-left: $margin-larger-sm
+

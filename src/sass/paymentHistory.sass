@@ -1,0 +1,62 @@
+@import 'src/sass/componentMixins'
+
+.payment-history
+    min-height: 100px
+    margin-top: 15px
+    +card
+
+.payment-history__title
+    font-weight: bold
+    font-size: 21px
+    margin-top: 5px
+    margin-bottom: 5px
+
+.payment-history__menu
+    +headerWithButton
+
+.payment-history__item
+    display: flex
+    text-align: center
+    justify-content: space-between
+    padding-left: 20px
+    padding-right: 20px
+
+.payment-history__item__active
+    background-color: #f5f5f5
+
+.payment-history__first-div
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 150px
+    justify-content: center
+    p
+        margin-right: 10px
+
+.payment-history__middle-div
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 100px
+    justify-content: center
+
+.payment-history__last-div
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: 170px
+    justify-content: center
+
+.payment-history__address
+    font-size: 12px
+
+.payment-history__download-button
+    +button(#f5f5f5, #6f6f6f, normal)
+    +buttonResponsive
+    height: 30px
+    flex-shrink: 0
+
+.payment-history__not-found
+    display: flex
+    justify-content: center
+    align-items: center

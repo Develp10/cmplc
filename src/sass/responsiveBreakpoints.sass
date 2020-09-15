@@ -1,0 +1,48 @@
+$xs: 400px
+$sm: 576px
+$between_sm_and_md: 680px
+$md: 768px
+$lg: 992px
+$between_lg_and_xl: 1100px 
+$xl: 1200px
+
+@mixin responsiveContainer
+    margin-left: auto
+    margin-right: auto
+    box-sizing: border-box
+    @media (min-width: $sm)
+        width: 100%
+    @media (min-width: $md)
+        width: 100%
+    @media (min-width: $lg)
+        width: 960px
+    @media (min-width: $xl)
+        width: 1140px
+
+@mixin alignChildrenInResponsiveGrid
+    display: flex
+    justify-content: center
+    >*
+        flex-grow: 1
+        flex-basis: 0
+        &:not(:first-child)
+            margin: 0 0 0 30px
+    @media (max-width: $lg)
+        >*:not(:first-child)
+            margin: 0 0 0 20px
+    @media (max-width: $md)
+        flex-direction: column
+        align-items: stretch
+        >*:not(:first-child)
+            margin: 15px 0 0
+
+// container should has display: flex
+@mixin responsiveCenteredCard
+    box-sizing: border-box
+    align-self: stretch
+    margin: 8px
+    @media (min-width: $xs)
+        margin: 30px
+    @media (min-width: $sm)
+        align-self: center
+        width: 470px

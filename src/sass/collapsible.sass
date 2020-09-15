@@ -1,0 +1,26 @@
+@import 'src/sass/responsiveBreakpoints'
+
+.collapsible
+    display: none
+    overflow: hidden
+    
+=visible
+    display: flex
+
+.collapsible-visible
+    +visible
+
+
+.collapsible-smaller-md
+    @media (min-width: $md)
+        +visible
+.collapsible-smaller-lg
+    @media (min-width: $lg)
+        +visible
+
+.hide-md
+    @media (min-width: $md)
+        display: none
+.hide-lg
+    @media (min-width: $lg)
+        display: none    

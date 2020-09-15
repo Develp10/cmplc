@@ -1,0 +1,94 @@
+@import 'src/sass/responsiveBreakpoints' 
+@import 'src/sass/componentMixins'
+    
+=progress-bar-body__filler($backgroundColor)
+    position: absolute
+    z-index: 999
+    margin: auto auto 0 0
+    width: 10%
+    height: 56px
+    height: 32px
+    background-color: $backgroundColor
+    border-radius: 10px 0 0 10px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding-right: 0
+    box-sizing: border-box
+
+.progress-bar-body
+    +responsiveContainer
+    margin-top: 30px
+    h6
+        margin: 0 0 10px
+
+.progress-bar-body__title
+    font-size: 36px
+    font-weight: 500
+    margin: 1rem 0
+
+.progress-bar-body__title-container
+    +alignChildrenResponsiveWithJustify("space-between", 10px)
+    margin: 0 0 20px
+    p
+        margin: 0
+        padding: 0
+    section:not(:first-child)
+        margin: 10px 0 0
+
+.progress-bar-body__title-item-left
+    text-align: left
+
+.progress-bar-body__title-item-right
+    text-align: right
+    @media (max-width: $md)
+        text-align: left
+        &>*:first-child
+            margin-top: 0
+        
+
+.progress-bar-body__container
+    position: relative
+    height: 32px
+
+.progress-bar-body__base
+    width: 100%
+    position: absolute
+    z-index: 99
+    height: 32px
+    background: #e0e0e0
+    border-radius: 10px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    box-sizing: border-box
+
+.progress-bar-body__filler-text
+    width: 100%
+    text-align: right
+    opacity: 0.2
+    margin-right: 0.5em
+    @media (min-width: $xl)
+        font-size: 1rem !important
+    &:hover
+        opacity: 1
+
+.progress-bar-body__filler-starting-price
+    color: #ffffff
+    +progress-bar-body__filler(#3B3B3B)
+
+.progress-bar-body__filler-yesterday-price
+    +progress-bar-body__filler(#479D6F)
+
+.progress-bar-body__filler-current-price
+    +progress-bar-body__filler(#62C260)
+
+.progress-bar-body__footer-container
+    +alignChildrenResponsiveWithJustify("right")
+    margin: 20px 0 0
+
+.progress-bar-body__footer-item-right
+    text-align: left
+
+.no-mr
+    margin: 0 !important

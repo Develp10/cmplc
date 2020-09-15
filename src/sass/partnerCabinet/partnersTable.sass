@@ -1,0 +1,60 @@
+@import 'src/sass/responsiveBreakpoints'   
+@import 'src/sass/componentMixins'
+
+.partners-table
+    +card
+    margin-top: 15px
+
+.partners-table__item
+    box-sizing: border-box
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    text-align: center
+    padding: 10px 15px
+    justify-content: center
+    &__active
+        background: #f4f4f4
+        border-radius: 50px
+    p
+        margin: 0
+        padding: 0
+
+.partners-table__menu
+    +headerWithButton
+
+.partners-table__title
+    font-weight: bold
+    font-size: 21px
+    margin-top: 5px
+    margin-bottom: 5px
+
+.partners-table__download-button
+    +button(#f5f5f5, #6f6f6f, normal)
+    +buttonResponsive
+    height: 30px
+
+.partners-table__first-div
+    flex-grow: 1
+    flex-shrink: 0
+    flex-basis: 10rem
+    text-align: left
+    @media (max-width: $xs)
+        text-align: center
+        flex-basis: 100%
+
+.partners-table__middle-div
+    flex-grow: 0
+
+.partners-table__last-div
+    flex-grow: 1
+    text-align: right
+    flex-shrink: 1
+    @media (max-width: $xs)
+        flex-grow: 0
+        margin-left: 5rem
+
+.partners-table__not-found
+    display: flex
+    justify-content: center
+    align-items: center

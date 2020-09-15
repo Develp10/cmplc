@@ -1,0 +1,141 @@
+@import 'src/sass/responsiveBreakpoints'   
+@import 'src/sass/componentMixins'
+
+.balance-table
+    +card
+    padding: 15px
+
+.balance__refresh-logo-div
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    align-items: baseline
+    img
+        width: 25px
+        height: 25px
+        right: 20px
+        display: block
+        margin-right: 5px
+        &:active
+            transform: translateY(2px)
+    .balance__count
+        font-size: 30px
+        font-weight: bold
+    .dollar
+        font-size: 15px
+    .balance__dash__orange
+        color: #ff7d3d
+
+.balance-table__bottom-block p
+        margin: 0
+
+.balance-table__div__black
+    background-color: #ffffff
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    align-items: center
+    p
+        color: #000000
+    .balance__count
+        font-size: 30px
+        font-weight: bold
+    .dollar
+        font-size: 15px
+    .balance__dash__orange
+        color: #ff7d3d
+
+.balance-table__title-row
+    margin-bottom: 10px
+    margin-top: 10px
+    +buttonsAlignResponsive
+    p
+        margin: 0
+
+.balance-table__title-text
+    font-weight: bold
+
+
+.balance-table__cash-button
+    &__white
+        +button(#ffffff)
+        +buttonResponsive
+    &__gray
+        +button(#545458, #ffffff)
+        +buttonResponsive
+
+.balance-table__cmp-buttons
+    margin: 10px auto
+    +buttonsAlignResponsive
+
+.balance-table__body
+    display: flex
+    flex-direction: column
+
+.balance-table__item
+    display: flex
+    flex-direction: column
+    p
+        margin: 0
+        padding: 10px
+        text-align: center
+.balance-table__item-row
+    display: flex
+    height: 45px
+    align-items: center
+    justify-content: space-between
+    border-radius: 10px
+
+.balance-table__currency-name
+    flex-basis: 10rem
+    text-align: left !important
+.balance-table__balance
+    flex-basis: 3rem
+.balance-table__balance-cmp-price
+    flex-basis: 3rem
+.balance-table__cmp-name
+    flex-basis: 10rem
+    text-align: right !important
+
+.balance-table__item-row-first
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+.balance-table__item__active
+    background: #f4f4f4
+
+.balance-table-cash-in__input
+    width: 100%
+    position: relative
+    display: flex
+    input
+        padding-left: 10px
+        background-color: #f5f5f5
+        display: block
+        width: 100%
+        height: 45px
+        border-radius: 10px
+        border: none /* Убираем рамку */
+        outline: none /* Убираем свечение в Chrome и Safari */
+        -webkit-appearance: none /* Убираем рамку в Chrome и Safari */
+    .balance-table-cash-in__select
+        position: absolute
+        top: 9px
+        right: 25px
+        border-radius: 10px
+        border: none
+        color: #ffffff
+        font-weight: bold
+        select
+            font-size: 20px
+
+.balance-table__buy-button
+    +button(#CFFDD7, #000000)
+    +buttonResponsive(true)
+
+.balance-table__cash-in-button
+    +button(#8085bf, #ffffff)
+    +buttonResponsive(true)

@@ -1,0 +1,40 @@
+@import 'src/sass/responsiveBreakpoints'
+.menu
+    display: flex
+    justify-content: space-between
+    text-align: center
+    font-weight: bold
+    background-color: #ffffff
+    width: 370px
+    border-radius: 15px
+    margin-bottom: 15px
+    box-shadow: 2px 10px 16px 0px rgba(0,0,0,0.14)
+    @media (max-width: $xs)
+        flex-direction: column
+        width: 100%
+    a
+        text-decoration: none
+        &:visited
+            color: #000000
+
+.menu-tab
+    padding-top: 15px
+    padding-bottom: 15px
+    padding-left: 25px
+    padding-right: 25px
+    border-radius: 15px
+    position: relative
+
+.menu-tab__active:before
+    color: #FF9800
+    content: "\2022"
+    font-size: 26px
+    font-weight: 700
+    left: 13px
+    line-height: 18px
+    position: absolute
+
+.menu-tab__active
+    background-color: #000000
+    color: #ffffff
+    box-shadow: 2px 10px 16px 0px rgba(0,0,0,0.14)

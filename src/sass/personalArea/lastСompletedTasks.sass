@@ -1,0 +1,88 @@
+@import 'src/sass/componentMixins'
+
+.last-completed-tasks
+    +card
+    margin-bottom: 15px
+
+.last-completed-tasks__title
+    font-weight: bold
+    font-size: 21px
+    margin-top: 5px
+    margin-bottom: 5px
+
+.last-completed-tasks__menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: 15px
+    margin-right: 15px
+
+.last-completed-tasks__table
+    text-align: center
+    width: 100%
+    border: none
+    border-spacing: 0
+    tr
+    td
+        border: none
+        padding: 10px
+        vertical-align: middle
+
+.last-completed-tasks__tr-td__gray
+    background-color: #f5f5f5
+
+.last-completed-tasks__download-button
+    border-radius: 10px
+    border: 0
+    background-color: #f5f5f5
+    height: 30px
+    color: #6f6f6f
+
+.last-completed-tasks__circle
+    width: 50px
+    height: 50px
+    border-radius: 25px
+    background-color: #d8d8d8
+
+.last-completed-tasks__table-row
+    display: flex
+    flex-direction: row
+    width: 100%
+    align-items: center
+    padding: 0 20px
+    box-sizing: border-box
+
+    &__active
+        @extend .last-completed-tasks__table-row
+        background-color: #f5f5f5
+
+    >*
+        flex-basis: 3rem
+
+.last-completed-tasks__logo-div
+    flex-grow: 2
+    text-align: left
+.last-completed-tasks__row-title
+    flex-grow: 3
+    text-align: center
+.last-completed-tasks__row-time
+    flex-grow: 5
+    text-align: right
+
+.last-completed-tasks__name-alfa
+    font-weight: bold
+    color: #41A056
+    font-size: 18px
+
+.last-completed-tasks__name-beta
+    font-weight: bold
+    color: #DD8232
+    font-size: 16px
+.last-completed-tasks__name-gamma
+    font-weight: bold
+    color: #DD7241
+    font-size: 16px
+.last-completed-tasks__name-delta
+    font-weight: bold
+    color: #E44E4C
+    font-size: 16px
